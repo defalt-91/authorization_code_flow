@@ -17,5 +17,3 @@ B
 Pipfile,1/5/15af4b3d30054104e85f65a444b1db188c5deefb
 Q
 !client/src/app/app.component.scss,f/e/feb4da7824481c7e6abb8d07414607c8d6952191
-W
-'client/src/app/home/home.component.scss,4/e/4eb976cc17a2e1f40e7b4557f3765705aa2d885d
