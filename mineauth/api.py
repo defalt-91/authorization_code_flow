@@ -29,9 +29,10 @@ class GroupSerializer(serializers.ModelSerializer):
 
 # Create the API views
 class UserList(generics.ListCreateAPIView):
-	permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+	permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope, TokenHasScope]
 	queryset = User.objects.all()
 	serializer_class = UserSerializer
+	required_scopes = ['doest have']
 
 
 class UserDetails(generics.RetrieveAPIView):

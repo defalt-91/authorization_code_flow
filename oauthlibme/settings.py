@@ -119,12 +119,13 @@ REST_FRAMEWORK = {
 with open('oidc.key', 'r') as f:
 	OIDC_RSA_PRIVATE_KEY = f.read()
 
-
 OAUTH2_PROVIDER = {
-		"OIDC_ENABLED"        : True,
-		"OIDC_RSA_PRIVATE_KEY": OIDC_RSA_PRIVATE_KEY,
-		"PKCE_REQUIRED"       : True,
-		'SCOPES'              : {
+		"ACCESS_TOKEN_EXPIRE_SECONDS": 6000,
+		# AUTHORIZATION_CODE_EXPIRE_SECONDS:'',
+		"OIDC_ENABLED"               : True,
+		"OIDC_RSA_PRIVATE_KEY"       : OIDC_RSA_PRIVATE_KEY,
+		"PKCE_REQUIRED"              : True,
+		'SCOPES'                     : {
 				"openid": "OpenID Connect scope",
 				'read'  : 'Read scope',
 				'write' : 'Write scope',
